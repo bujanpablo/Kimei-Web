@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimei Cereales S.A. - 20 Años de Excelencia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kimei': {
+                            'green': '#2d5016',
+                            'gold': '#d4af37',
+                            'dark': '#1a1a1a',
+                            'light': '#f8f9fa'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+        .hero-text-shadow { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Efectos de navegación como Elementor */
+        .elementor-item-link:hover .elementor-item-link-overline {
+            transform: scaleX(1) !important;
+        }
+        
+        .elementor-item-link {
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* Asegurar alineación perfecta del menú con el logo */
+        .elementor-nav-menu_container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .elementor-nav-menu {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        
+        /* Ajustar posición del menú para alinearse con la mitad de la letra E */
+        .elementor-nav-menu li {
+            display: flex;
+            align-items: center;
+        }
+        
+        .elementor-nav-menu a {
+            line-height: 1;
+            padding-top: 0;
+            padding-bottom: 0;
+            transform: translateY(8px);
+        }
+        
+        /* Ajuste específico para alineación con la línea media de la E */
+        .elementor-nav-menu_container {
+            transform: translateY(5px);
+        }
+        
+        /* Responsive para móviles */
+        @media (max-width: 1024px) {
+            .elementor-hidden-tablet,
+            .elementor-hidden-phone {
+                display: none !important;
+            }
+            
+            .elementor-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 20px;
+                position: relative;
+                gap: 20px;
+            }
+            
+            .elementor-column {
+                width: auto !important;
+                flex-shrink: 0;
+            }
+            
+            /* Asegurar que el logo no se superponga */
+            .elementor-column:first-child,
+            #logo-column {
+                max-width: 25%;
+                z-index: 10;
+                flex-shrink: 0;
+                overflow: hidden;
+            }
+            
+            .elementor-column:nth-child(2) {
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10;
+                max-width: 50%;
+                position: relative;
+            }
+            
+            .elementor-column:nth-child(3) {
+                max-width: 25%;
+                flex-shrink: 0;
+            }
+            
+            /* Ocultar navegación en móviles */
+            .elementor-nav-menu {
+                display: none !important;
+            }
+            
+            /* Mostrar botón hamburguesa */
+            .hamburger-menu {
+                display: block !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .elementor-container {
+                padding: 12px 15px;
+                gap: 15px;
+            }
+            
+            .elementor-column:first-child,
+            #logo-column {
+                max-width: 30%;
+            }
+            
+            .elementor-column:nth-child(2) {
+                max-width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .elementor-column:nth-child(3) {
+                max-width: 30%;
+            }
+            
+            /* Reducir gap de navegación en móviles */
+            .elementor-nav-menu {
+                gap: 15px !important;
+            }
+            
+            /* Ajustar tamaño del logo en móviles pequeños */
+            .elementor-column:first-child img,
+            #logo-column img,
+            #logo-image {
+                max-height: 60px !important;
+                width: auto !important;
+                max-width: 100%;
+            }
+            
+            .elementor-column:first-child .logo-placeholder,
+            #logo-column .logo-placeholder {
+                transform: scale(0.8);
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .elementor-container {
+                padding: 10px 12px;
+                gap: 10px;
+            }
+            
+            .elementor-column:first-child,
+            #logo-column {
+                max-width: 25%;
+            }
+            
+            .elementor-column:nth-child(2) {
+                max-width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .elementor-column:nth-child(3) {
+                max-width: 25%;
+            }
+            
+            /* Reducir aún más el gap de navegación */
+            .elementor-nav-menu {
+                gap: 10px !important;
+            }
+            
+            /* Logo aún más pequeño en móviles muy pequeños */
+            .elementor-column:first-child img,
+            #logo-column img,
+            #logo-image {
+                max-height: 50px !important;
+                max-width: 100%;
+            }
+            
+            .elementor-column:first-child .logo-placeholder,
+            #logo-column .logo-placeholder {
+                transform: scale(0.7);
+                max-width: 100%;
+            }
+            
+            .elementor-column:first-child .logo-placeholder h1,
+            #logo-column .logo-placeholder h1 {
+                font-size: 1.2rem !important;
+            }
+            
+            .elementor-column:first-child .logo-placeholder p,
+            #logo-column .logo-placeholder p {
+                font-size: 0.6rem !important;
+            }
+        }
+        
+        /* Estilos del menú hamburguesa */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+        }
+        
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background-color: #2d5016;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .hamburger-menu.open .hamburger-line:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger-menu.open .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger-menu.open .hamburger-line:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        /* Menú móvil integrado en el header */
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 0 0 16px 16px;
+            padding: 40px 20px;
+            z-index: 1000;
+            width: 100%;
+            margin-top: 0;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .mobile-nav li {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .mobile-nav a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 15px 35px;
+            display: block;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            margin: 0 auto;
+            max-width: 300px;
+            letter-spacing: 0.05em;
+        }
+        
+        .mobile-nav a:hover {
+            color: #d4af37;
+            transform: translateY(-3px);
+        }
+        
+        .mobile-nav a.active {
+            color: #d4af37;
+            background-color: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.1);
+        }
+        
+        .mobile-nav .cta-button {
+            background-color: transparent;
+            color: #000000;
+            border: 2px solid #d4af37;
+            margin-top: 35px;
+            font-weight: 600;
+            padding: 18px 45px;
+            font-size: 20px;
+            border-radius: 50px;
+            letter-spacing: 0.05em;
+        }
+        
+        .mobile-nav .cta-button:hover {
+            background-color: #d4af37;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Animación de movimiento lateral para el botón Exclusivo Clientes */
+        .exclusive-button {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .exclusive-button:hover {
+            animation: shake 1.2s ease-in-out;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateY(5px) translateX(0); }
+            10% { transform: translateY(5px) translateX(-3px); }
+            20% { transform: translateY(5px) translateX(3px); }
+            30% { transform: translateY(5px) translateX(-3px); }
+            40% { transform: translateY(5px) translateX(3px); }
+            50% { transform: translateY(5px) translateX(-2px); }
+            60% { transform: translateY(5px) translateX(2px); }
+            70% { transform: translateY(5px) translateX(-2px); }
+            80% { transform: translateY(5px) translateX(2px); }
+            90% { transform: translateY(5px) translateX(-1px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg" data-elementor-type="header" data-elementor-id="39">
+        <section class="elementor-section elementor-top-section elementor-section-boxed elementor-section-height-default elementor-sticky elementor-sticky--effects elementor-sticky--active" style="position: fixed; margin-top: 0px; margin-bottom: 0px; top: 0px; width: 100%; z-index: 1000;">
+            <div class="elementor-container elementor-column-gap-default" style="display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; align-items: center; min-height: 80px;">
+                
+                <!-- Columna 1: Logo (33%) -->
+                <div class="elementor-column elementor-col-33 elementor-top-column" id="logo-column" style="width: 33.333%; display: flex; align-items: center; justify-content: flex-start;">
+                    <div class="elementor-widget-wrap elementor-element-populated" style="display: flex; align-items: center;">
+                        <div class="elementor-widget-container">
+                            <!-- Logo real de Kimei -->
+                            <div class="flex items-center" id="logo-container">
+                                <img 
+                                    src="public/images/logos/logo-kimei-full.png" 
+                                    alt="Kimei Cereales S.A." 
+                                    class="h-28 w-auto"
+                                    id="logo-image"
+                                    onload="document.getElementById('logo-placeholder').style.display='none';"
+                                    onerror="document.getElementById('logo-image').style.display='none'; document.getElementById('logo-placeholder').style.display='flex';"
+                                />
+                                <!-- Placeholder que se muestra si no hay logo real -->
+                                <div class="flex items-center space-x-3" id="logo-placeholder" style="display: none;">
+                                    <div class="bg-kimei-green text-white p-2 rounded-lg">
+                                        <span class="text-xl font-bold">K</span>
+                                    </div>
+                                    <div>
+                                        <h1 class="text-2xl font-bold text-kimei-green">KIMEI</h1>
+                                        <p class="text-xs text-gray-600">CEREALES S.A.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Navegación (33%) -->
+                <div class="elementor-column elementor-col-33 elementor-top-column" style="width: 33.333%; display: flex; align-items: center; justify-content: center;">
+                    <div class="elementor-widget-wrap elementor-element-populated" style="display: flex; align-items: center; justify-content: center;">
+                        <div class="elementor-widget-container">
+                            <!-- Navegación Desktop -->
+                            <nav class="elementor-nav-menu--main elementor-nav-menu_container elementor-nav-menu--layout-horizontal" aria-label="Menú" style="display: flex; align-items: center; justify-content: center;">
+                                <ul class="elementor-nav-menu" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px;">
+                                    <li class="elementor-item elementor-item-active">
+                                        <a href="#" class="elementor-item-link text-kimei-gold font-semibold text-base uppercase tracking-wide transition-colors duration-300" style="text-decoration: none; padding: 8px 20px; display: block;">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li class="elementor-item">
+                                        <a href="#" class="elementor-item-link text-black hover:text-kimei-gold font-semibold text-base uppercase tracking-wide transition-colors duration-300" style="text-decoration: none; padding: 8px 20px; display: block;">
+                                            Kimei
+                                        </a>
+                                    </li>
+                                    <li class="elementor-item">
+                                        <a href="#" class="elementor-item-link text-black hover:text-kimei-gold font-semibold text-base uppercase tracking-wide transition-colors duration-300" style="text-decoration: none; padding: 8px 20px; display: block;">
+                                            Informes
+                                        </a>
+                                    </li>
+                                    <li class="elementor-item">
+                                        <a href="#" class="elementor-item-link text-black hover:text-kimei-gold font-semibold text-base uppercase tracking-wide transition-colors duration-300" style="text-decoration: none; padding: 8px 20px; display: block;">
+                                            Mercado
+                                        </a>
+                                    </li>
+                                    <li class="elementor-item">
+                                        <a href="#" class="elementor-item-link text-black hover:text-kimei-gold font-semibold text-base uppercase tracking-wide transition-colors duration-300" style="text-decoration: none; padding: 8px 20px; display: block;">
+                                            Contacto
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            
+                            <!-- Botón Hamburguesa -->
+                            <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                                <div class="hamburger-line"></div>
+                                <div class="hamburger-line"></div>
+                                <div class="hamburger-line"></div>
+                            </div>
+                            
+                            <!-- Menú Móvil Integrado -->
+                            <div class="mobile-nav" id="mobileNav">
+                                <ul>
+                                    <li><a href="#" class="active uppercase tracking-wide font-semibold">Home</a></li>
+                                    <li><a href="#" class="uppercase tracking-wide font-semibold">Kimei</a></li>
+                                    <li><a href="#" class="uppercase tracking-wide font-semibold">Informes</a></li>
+                                    <li><a href="#" class="uppercase tracking-wide font-semibold">Mercado</a></li>
+                                    <li><a href="#" class="uppercase tracking-wide font-semibold">Contacto</a></li>
+                                    <li><a href="#" class="exclusive-button cta-button uppercase tracking-wide font-semibold">Exclusivo Clientes</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Botón CTA (33%) -->
+                <div class="elementor-column elementor-col-33 elementor-top-column" style="width: 33.333%; display: flex; align-items: center; justify-content: flex-end;">
+                    <div class="elementor-widget-wrap elementor-element-populated" style="display: flex; align-items: center; justify-content: flex-end;">
+                        <div class="elementor-widget-container">
+                            <button class="exclusive-button bg-transparent border-2 border-kimei-gold text-black hover:bg-kimei-gold hover:text-white px-4 py-2 md:px-6 md:py-2 rounded-full font-medium text-sm md:text-base transition-all duration-300 hover:shadow-lg" style="transform: translateY(5px);">
+                                <span class="hidden sm:inline">Exclusivo Clientes</span>
+                                <span class="sm:hidden">Exclusivo</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-8">
+        <!-- Fondo de campo de trigo -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-blue-300 via-blue-200 to-yellow-400"></div>
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-yellow-600 via-yellow-500 to-yellow-400 opacity-80"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-kimei-green/20"></div>
+        </div>
+
+        <!-- Contenido -->
+        <div class="relative z-10 container mx-auto py-12 sm:py-16 lg:py-20">
+            <div class="max-w-4xl mx-auto">
+
+                <!-- Título -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 sm:mb-10 leading-tight hero-text-shadow">
+                    Cultivando
+                    <span class="block text-kimei-gold">Futuros</span>
+                    <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mt-4 opacity-90">
+                        desde 2003
+                    </span>
+                </h1>
+
+                <!-- Subtítulo -->
+                <p class="text-lg sm:text-xl md:text-2xl text-white/90 mb-10 sm:mb-12 max-w-2xl leading-relaxed">
+                    Líderes en comercialización de granos e insumos agrícolas, 
+                    conectando productores con mercados globales con más de 
+                    <span class="text-kimei-gold font-semibold"> dos décadas de experiencia</span>.
+                </p>
+
+                <!-- Botones -->
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-12 sm:mb-16">
+                    <button class="bg-kimei-gold hover:bg-kimei-gold/90 text-kimei-dark px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-base sm:text-lg transition-all duration-300 hover:shadow-lg">
+                        Nuestros Servicios →
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-kimei-green px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-base sm:text-lg transition-all duration-300">
+                        Portal de Clientes
+                    </button>
+                </div>
+
+                <!-- Estadísticas -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <div class="glass-effect rounded-xl p-6 sm:p-8">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <span class="text-kimei-gold text-2xl">📅</span>
+                            <span class="text-3xl sm:text-4xl font-bold text-white">20+</span>
+                        </div>
+                        <p class="text-white/80 text-sm sm:text-base">Años de Experiencia</p>
+                    </div>
+                    <div class="glass-effect rounded-xl p-6 sm:p-8">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <span class="text-kimei-gold text-2xl">📈</span>
+                            <span class="text-3xl sm:text-4xl font-bold text-white">1000+</span>
+                        </div>
+                        <p class="text-white/80 text-sm sm:text-base">Operaciones Exitosas</p>
+                    </div>
+                    <div class="glass-effect rounded-xl p-6 sm:p-8 sm:col-span-2 lg:col-span-1">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <span class="text-kimei-gold text-2xl">👥</span>
+                            <span class="text-3xl sm:text-4xl font-bold text-white">500+</span>
+                        </div>
+                        <p class="text-white/80 text-sm sm:text-base">Clientes Satisfechos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const hamburger = document.querySelector('.hamburger-menu');
+            
+            mobileNav.classList.toggle('active');
+            hamburger.classList.toggle('open');
+        }
+        
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const hamburger = document.querySelector('.hamburger-menu');
+            
+            mobileNav.classList.remove('active');
+            hamburger.classList.remove('open');
+        }
+        
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
+        // Cerrar menú al hacer clic fuera del menú
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const hamburger = document.querySelector('.hamburger-menu');
+            
+            if (!mobileNav.contains(event.target) && !hamburger.contains(event.target)) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Cerrar menú al redimensionar la ventana (si se vuelve desktop)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>
