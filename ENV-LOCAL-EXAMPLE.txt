@@ -1,0 +1,28 @@
+# Archivo .env.local - Credenciales de Primary API Hub
+# Obtener contactando: remarkets@primary.com.ar
+
+PRIMARY_USERNAME=tu_usuario_aqui
+PRIMARY_PASSWORD=tu_password_aqui
+PRIMARY_ACCOUNT=tu_cuenta_aqui
+
+# URL base de la API de Primary
+PRIMARY_API_URL=https://api.primary.com.ar
+
+# Configuración de cache (en segundos)
+PRIMARY_CACHE_TTL=300
+
+# Modo de desarrollo (false para usar datos reales)
+PRIMARY_DEV_MODE=false
+
+# Configuración para entorno de pruebas (reMarkets)
+PRIMARY_SANDBOX_MODE=false
+
+# INSTRUCCIONES:
+# 1. Copiar este contenido
+# 2. Crear archivo .env.local en la raíz del proyecto
+# 3. Reemplazar los valores de ejemplo con tus credenciales reales
+# 4. Nunca commitear este archivo al repositorio (ya está en .gitignore)
+
+
+
+

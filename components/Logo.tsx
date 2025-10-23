@@ -13,9 +13,9 @@ const Logo = ({ className = '', showText = true, size = 'md' }: LogoProps) => {
   const [logoError, setLogoError] = useState(false)
 
   const sizeClasses = {
-    sm: 'h-18',
-    md: 'h-28',
-    lg: 'h-36'
+    sm: 'h-8',   // 32px
+    md: 'h-10',  // 40px
+    lg: 'h-12'   // 48px
   }
 
   const textSizeClasses = {
